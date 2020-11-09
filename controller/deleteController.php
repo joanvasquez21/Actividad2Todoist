@@ -8,10 +8,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 
 
     $id = $_GET['id'];
-    /*     $description = $_POST['Description'];
-    $idtask = $_SESSION['idTask']; */
 
-    //echo $id;
 
     $conexion = connectMysql($dsn, $dbuser, $dbpass);
 

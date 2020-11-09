@@ -11,11 +11,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $description = $_POST['Description'];
     $idtask = $_SESSION['idTask'];
 
-    //echo $idtask;
 
     $conexion = connectMysql($dsn, $dbuser, $dbpass);
 
-    update($conexion, 'tasks', $idtask, $title, $description);
+    update($conexion, 'tasks', $idtask, $title, $description); //pasamos conexion //tabla taskstarea/tituloquepongamos//descripcion 
+                                                            //al db funcion update 
 }
 
 header("Location: ../src/template/dashboard.tpl.php?uname=" . $_SESSION['uname']);

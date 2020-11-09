@@ -11,10 +11,10 @@ include APP . '/src/template/header.tpl.php';
         <p class="h4 mb-4">Iniciar sesión</p>
 
         <!-- Email -->
-        <input type="input" id="defaultLoginFormEmail" name="usuario" class="form-control mb-4 md-12" placeholder="Usuario">
+        <input type="input" id="defaultLoginFormEmail" name="usuario" class="form-control mb-4 md-12" placeholder="joan / toni">
 
         <!-- Password -->
-        <input type="password" id="defaultLoginFormPassword" name="password" class="form-control mb-4" placeholder="Password">
+        <input type="password" id="defaultLoginFormPassword" name="password" class="form-control mb-4" placeholder="123">
 
         <!-- Sign in button -->
         <button class="btn btn-info btn-block my-4" type="submit">Entrar</button>
