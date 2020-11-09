@@ -3,7 +3,7 @@
 include 'header.tpl.php';
 
 ?>
-
+<!--Este bashboard esde las cabeceras -->
 
 
 <section class="container-fluid d-flex flex-row mt-5">
@@ -42,7 +42,8 @@ include 'header.tpl.php';
             </thead>
             <tbody>
 
-                <?php include "dashboardTable.tpl.php"; ?>
+                <?php include "dashboardTable.tpl.php"; ?> 
+                <!--Aqui llamo a la tabla -->
 
             </tbody>
         </table>

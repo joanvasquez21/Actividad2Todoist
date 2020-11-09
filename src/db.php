@@ -42,7 +42,8 @@ function auth($db, $uname, $pass): bool
     }
 }
 // funció d'inserció de registres en taula
-function insert($db, $table, $data): bool
+function insert($db, $table, $data): bool //data es un arreglo que permite insertar
+//todos los arreglos
 {
     if (is_array($data)) {
         $columns = '';
@@ -85,7 +86,7 @@ function update($db, $table, $id, $title, $description): bool
     }
 }
 
-function delete($db, $table, $id): bool
+function delete($db, $table, $id): bool //llamo a la bd tabla y id
 {
     try {
         $sql = "DELETE  FROM $table WHERE id=$id";
@@ -100,20 +101,25 @@ function delete($db, $table, $id): bool
 
 // funció de selecció de  tots els registres
 // pots indicar quins camps vols mostrar
-function selectAll($db, $table, $user, array $fields = null): array
+//agregamos usuario
+
+function selectAll($db, $table, $user, array $fields = null): array //tiene que mostrar
+//la tabla especificamente para un usuario
 {
     if (is_array($fields)) {
-        $columns = implode(',', $fields);
+        $columns = implode(',', $fields); //une elementos de un array
     } else {
         $columns = "*";
     }
-
+//seleccionamos  todas las columnas de la tabla donde el user seria igual al usuario que le estamos
+//enviando
     $sql = "SELECT {$columns} FROM {$table} WHERE user='$user'";
 
     $stmt = $db->prepare($sql);
     $stmt->execute();
     $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    return $rows;
+    return $rows; //cuando hacemos la consulta en la func aut devolveerra todas 
+    //las filas para ela usuario
 }
 
 // select amb join sense condició

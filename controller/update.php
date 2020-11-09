@@ -18,4 +18,4 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                                             //al db funcion update 
 }
 
-header("Location: ../src/template/dashboard.tpl.php?uname=" . $_SESSION['uname']);
+header("Location: ../src/template/dashboard.tpl.php?uname=" . $_SESSION['uname']); //actualizo para que despues me vuelva a actuallizar el dashboard
