@@ -83,7 +83,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `email`, `uname`, `passw`, `role`) VALUES
-(2, 'victor@gmai.com', 'victor', '123', 1),
+(2, 'tonian@gmai.com', 'toni', '123', 1),
 (3, 'joan@gmail.com', 'joan', '123', 1);
 
 --
