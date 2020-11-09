@@ -48,7 +48,7 @@ function insert($db, $table, $data): bool
         $columns = '';
         $bindv = '';
         $values = null;
-        foreach ($data as $column => $value) {
+        foreach ($data as $column => $value) { 
             $columns .= '`' . $column . '`,';
             $bindv .= '?,';
             $values[] = $value;

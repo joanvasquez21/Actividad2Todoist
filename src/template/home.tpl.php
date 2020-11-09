@@ -21,19 +21,11 @@ include APP . '/src/template/header.tpl.php';
 
         <!-- Register -->
         <p>¿No tienes una cuenta?
-            <a href="register.tpl.php">Regístrate</a>
+            <a href="register.tpl.php">Registrate</a>
             <!-- <a href="./controller/register.php">Regístrate</a> -->
         </p>
 
-        <!-- Comprobamos si la variable errores esta seteada, si es asi mostramos los errores -->
-        <?php if (!empty($errores)) : ?>
-            <div class="error">
-                <ul>
-                    <?php echo $errores; ?>
-                </ul>
-            </div>
-        <?php endif; ?>
-
+     
     </form>
 </section>
 
